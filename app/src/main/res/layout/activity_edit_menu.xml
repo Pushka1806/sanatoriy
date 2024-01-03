@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/orange"
+        android:layout_weight="0">
+
+        <TextView
+            android:id="@+id/typeOfFood"
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:gravity="left"
+            android:text="@string/zavtrak"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:layout_width= "wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:paddingTop="5dp"
+            android:paddingStart="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="|"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:id="@+id/typeOfDish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:paddingTop="5dp"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold|italic"
+            android:text="Напитки"/>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text=" Подтвердить "
+        android:textSize="25sp"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/get_menu_button_form"
+        android:layout_weight="0"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sanatoriy</string>
+    <string name="zavtrak">Завтрак</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_calendar_of_menu">CalendarOfMenuActivity</string>
+    <string name="alert_message">Вы уверены? Данные будут потеряны.</string>
+    <string name="alert_positive">Да</string>
+    <string name="alert_negative">Нет</string>
+    <!-- Strings used for fragments for navigation -->
+
+</resources>

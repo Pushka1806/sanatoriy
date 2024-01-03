@@ -1,0 +1,87 @@
+CustomRecyclerAdapter
+filter
+*
+//        when (radBt) {
+//           R.id.bt_radio1 -> {
+//               var dishBoolean = findDishInUserTable(bludes[position].id!!,0)
+//               if(!dishBoolean){
+//                   menuViewModel.addDish(bludes[position],0)
+//               }
+//               else{
+//
+//                   menuViewModel.removeDish(bludes[position],0)
+//               }
+//
+//           }
+//            R.id.bt_radio2 -> {
+//                var dishBoolean = findDishInUserTable(bludes[position].id!!, 1)
+//                if (!dishBoolean) {
+//                    menuViewModel.addDish(bludes[position], 1)
+//                } else {
+//                    menuViewModel.removeDish(bludes[position], 1)
+//                }
+//            }
+//            R.id.bt_radio3 ->{
+//                var dishBoolean = findDishInUserTable(bludes[position].id!!,2)
+//                if(!dishBoolean){
+//                    menuViewModel.addDish(bludes[position],2)
+//                }
+//                else{
+//                    menuViewModel.removeDish(bludes[position],2)
+//                }
+//            }
+//            R.id.bt_radio4 -> {
+//
+//                var dishBoolean = findDishInUserTable(bludes[position].id!!,3)
+//                if(!dishBoolean){
+//                    Log.i("filter_item", "addDish")
+//                    menuViewModel.addDish(bludes[position],3)
+//                }
+//                else{
+//                    Log.i("filter_item", "removeDish")
+//                    menuViewModel.removeDish(bludes[position],3)
+//                }
+//            }
+//            R.id.bt_radio5-> {
+//
+//                var dishBoolean = findDishInUserTable(bludes[position].id!!,4)
+//                if(!dishBoolean){
+//                    Log.i("filter_item", "addDish")
+//                    menuViewModel.addDish(bludes[position],4)
+//                }
+//                else{
+//                    Log.i("filter_item", "removeDish")
+//                    menuViewModel.removeDish(bludes[position],4)
+//                }
+//            }
+//            R.id.bt_radio6-> {
+//
+//                var dishBoolean = findDishInUserTable(bludes[position].id!!,5)
+//                if(!dishBoolean){
+//                    Log.i("filter_item", "addDish")
+//                    menuViewModel.addDish(bludes[position],5)
+//                }
+//                else{
+//                    Log.i("filter_item", "removeDish")
+//                    menuViewModel.removeDish(bludes[position],5)
+//                }
+//            }
+//        }
+
+*
+// holder.image.setImageResource(R.drawable.grecha)
+//        if (bludes[position].isForKids!!) {
+//            holder.kids.visibility = View.VISIBLE
+//        }
+//        if (bludes[position].isDefaultBludo!!) {
+//            holder.dejurnoe_bludo.visibility = View.VISIBLE
+//        }\
+
+*
+ kbju_item += "/"
+//        kbju_item += bludes[position].protein
+//        kbju_item += "/"
+//        kbju_item += bludes[position].fats
+//        kbju_item += "/"
+//        kbju_item += bludes[position].carbohydrates
+**

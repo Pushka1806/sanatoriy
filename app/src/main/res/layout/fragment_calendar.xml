@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".bussiness.MainActivity.calendar.CalendarFragment">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:selectedWeekBackgroundColor="#ff0000"
+        android:weekNumberColor="#0000ff"
+        android:weekSeparatorLineColor="#00ff00" />
+
+    <Button
+        android:id="@+id/checkUserMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Просмотреть меню"
+        android:textSize="20sp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+
+    <Button
+        android:id="@+id/checkGlobalMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cделать заказ на"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

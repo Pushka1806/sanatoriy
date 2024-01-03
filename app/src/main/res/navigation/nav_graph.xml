@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.CalendarFragment"
+        android:label="Просмотр меню"
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_menuListFragment"
+            app:destination="@id/menuListFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_listOfPlacesFragment"
+            app:destination="@id/listOfPlacesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuListFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.menuList.MenuListFragment"
+        android:label="Выбор блюд" >
+        <action
+            android:id="@+id/action_menuListFragment_to_infoOfSelectedDishesFragment"
+            app:destination="@id/infoOfSelectedDishesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoOfSelectedDishesFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.menuList.SelectedDishes.ListOfPlacesSelectedDishesFragment"
+        android:label="Меню" >
+        <action
+            android:id="@+id/action_infoOfSelectedDishesFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_infoOfSelectedDishesFragment_to_checkSelectedDishesFragment"
+            app:destination="@id/checkSelectedDishesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkSelectedDishesFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.infoOfUserMenu.checkMenu.CheckSelectedDishesFragment"
+        android:label="Выберете номер места" />
+
+    <fragment
+        android:id="@+id/checkMenuFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.infoOfUserMenu.checkMenu.CheckUserMenuFragment"
+        android:label="Меню" >
+        <action
+            android:id="@+id/action_checkMenuFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listOfPlacesFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.infoOfUserMenu.ListOfPlacesFragment"
+        android:label="Выберете номер места"
+        tools:layout="@layout/fragment_list_of_places" >
+        <action
+            android:id="@+id/action_listOfPlacesFragment_to_checkMenuFragment"
+            app:destination="@id/checkMenuFragment" />
+    </fragment>
+</navigation>
