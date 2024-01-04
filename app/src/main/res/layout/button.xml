@@ -4,12 +4,22 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/previousDoubleArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/double_arrow_left"
+        android:tint="@color/black"
+        tools:ignore="UseAppTint" />
+
     <ImageView
         android:id="@+id/previousPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_left"
-        android:tint="@color/gray"
+        android:src="@drawable/arrow_left"
+        android:tint="@color/black"
         android:layout_weight="1"
         tools:ignore="UseAppTint" />
 
@@ -17,9 +27,18 @@
         android:id="@+id/nextPageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_right"
-        android:tint="@color/orange"
+        android:src="@drawable/arrow_right"
+        android:tint="@color/black"
         android:layout_weight="1"
+        tools:ignore="UseAppTint" />
+
+    <ImageView
+        android:id="@+id/nextDoubleArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/double_arrow_right"
+        android:tint="@color/black"
         tools:ignore="UseAppTint" />
 
 

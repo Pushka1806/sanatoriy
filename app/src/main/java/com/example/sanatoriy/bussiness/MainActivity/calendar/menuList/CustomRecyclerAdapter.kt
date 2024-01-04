@@ -56,6 +56,8 @@ class CustomRecyclerAdapter(private val bludes: List<Dishes>, private val contex
     class MyButtonHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var nextPage:ImageView = itemView.findViewById(R.id.nextPageButton)
         var previousPage:ImageView = itemView.findViewById(R.id.previousPageButton)
+        var doubleArrowRight:ImageView = itemView.findViewById(R.id.nextDoubleArrow)
+        var doubleArrowLeft:ImageView = itemView.findViewById(R.id.previousDoubleArrow)
 
     }
 
@@ -87,6 +89,12 @@ class CustomRecyclerAdapter(private val bludes: List<Dishes>, private val contex
                 menuViewModel.nextPage() })
             holder.previousPage.setOnClickListener {
                 menuViewModel.previousPage()
+            }
+            holder.doubleArrowLeft.setOnClickListener{
+                menuViewModel.doubleArrowLeft()
+            }
+            holder.doubleArrowRight.setOnClickListener{
+                menuViewModel.doubleArrowRight()
             }
         }
         else {

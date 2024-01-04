@@ -2,6 +2,7 @@ package com.example.sanatoriy.bussiness.MainActivity.calendar.menuList
 
 import android.annotation.SuppressLint
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.myroutekotlin.InternetConnection.Retrofit.Common
@@ -62,7 +63,7 @@ class  MenuViewModel @Inject constructor(private val UDR: UserDataRepositoriy) {
         }
     }
 
-    fun previousPage(){
+    fun previousPage(){ // переход на следующий приём пищи или на следующий тип блюда
         if(idTypeOfDish - 1 >= 0){
             idTypeOfDish-=1
             initTextFront()
@@ -73,6 +74,31 @@ class  MenuViewModel @Inject constructor(private val UDR: UserDataRepositoriy) {
             idTypeOfDish = UDR.globalmenu!!.data.menu.typeOfFoodIntakeItems[idTypeOfFood].typeOfDishItems.size-1
             initTextFront()
             _page.value = _page.value?.minus(1)
+        }
+    }
+
+   fun doubleArrowLeft(){ // переход на предыдущий приём пищи
+       if(idTypeOfFood - 1 >= 0){
+           val deltaPageValue = idTypeOfDish + UDR.globalmenu!!.data.menu.typeOfFoodIntakeItems[idTypeOfFood-1].typeOfDishItems.size // количество страниц на которое возвращаемся (номер типа блюда плюс размер массива блюд предыдущего приёма пищи)
+           idTypeOfFood -= 1
+           idTypeOfDish = 0
+           initTextFront()
+           _page.value = _page.value?.minus(deltaPageValue)
+       }
+       else{
+           Log.i("ERROR", "ABOBA")
+       }
+   }
+    fun doubleArrowRight(){// переход на следующий приём пищи
+        if(idTypeOfFood + 1 <= UDR.globalmenu!!.data.menu.typeOfFoodIntakeItems.size-1) {
+            val deltaPageValue = UDR.globalmenu!!.data.menu.typeOfFoodIntakeItems[idTypeOfFood].typeOfDishItems.size - idTypeOfDish  // получаем количество страниц на которое нужно перейти вперёд (размер типов блюд минус номер текущего типа)
+            idTypeOfFood += 1
+            idTypeOfDish = 0
+            initTextFront()
+            _page.value = _page.value?.plus(deltaPageValue)
+        }
+        else{
+            Log.i("ERROR", "IDFOOD ${idTypeOfFood} SIZE ${UDR.globalmenu!!.data.menu.typeOfFoodIntakeItems.size-1}"  )
         }
     }
 
