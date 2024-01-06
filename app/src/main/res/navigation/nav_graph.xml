@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_menuListFragment_to_infoOfSelectedDishesFragment"
             app:destination="@id/infoOfSelectedDishesFragment" />
+        <action
+            android:id="@+id/action_menuListFragment_to_dietInfoFragment"
+            app:destination="@id/dietInfoFragment" />
     </fragment>
 
     <fragment
@@ -59,5 +62,14 @@
         <action
             android:id="@+id/action_listOfPlacesFragment_to_checkMenuFragment"
             app:destination="@id/checkMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietInfoFragment"
+        android:name="com.example.sanatoriy.bussiness.MainActivity.calendar.dietInfo.DietInfoFragment"
+        android:label="Описание диет"
+        tools:layout="@layout/fragment_diet_info" >
+        <action
+            android:id="@+id/action_dietInfoFragment_to_menuListFragment"
+            app:destination="@id/menuListFragment" />
     </fragment>
 </navigation>
