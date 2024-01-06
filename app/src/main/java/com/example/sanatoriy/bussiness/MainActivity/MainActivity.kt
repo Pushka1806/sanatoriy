@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.MenuItem.OnMenuItemClickListener
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -55,6 +56,9 @@ class MainActivity : DaggerAppCompatActivity(), calendar_interface
             if(it.itemId == R.id.logout_item){
                 viewModel.unregister()
                 startActivity(Intent(baseContext, RegisterActivity::class.java))
+            }
+            if(it.itemId == R.id.dietInfo_item){
+                navHostFragment.findNavController().navigate(R.id.dietInfoFragment)
             }
             return@setOnMenuItemClickListener true
         }
