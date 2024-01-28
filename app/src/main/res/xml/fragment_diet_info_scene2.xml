@@ -5,17 +5,23 @@
 
     <Transition
         motion:constraintSetStart="@id/start"
-        motion:constraintSetEnd="@+id/next"
+        motion:constraintSetEnd="@+id/previous"
         motion:duration="1000"
         android:id="@+id/forward">
         <OnSwipe
             motion:dragDirection="dragLeft"
             motion:touchAnchorSide="left" />
+        <KeyFrameSet >
+            <KeyPosition
+                motion:motionTarget="@+id/text_center"
+                motion:framePosition="30"
+                motion:keyPositionType="deltaRelative" />
+        </KeyFrameSet>
     </Transition>
 
     <Transition
         motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/previous"
+        motion:constraintSetEnd="@+id/next"
         android:id="@+id/backward">
         <OnSwipe
             motion:dragDirection="dragRight"
@@ -35,6 +41,18 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp" />
+        <Constraint
+
+            android:id="@+id/text_up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="400dp"
+            android:layout_marginBottom="8dp"
+           />
     </ConstraintSet>
 
 

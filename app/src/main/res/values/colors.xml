@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name ="gray">#d7dcda</color>
     <color name="orange">#ffaa00</color>
+    <color name="orange_light">#F7EBD4</color>
+    <color name="orange_neutral">#FDF8EC</color>
+    <color name="orange_txt">#FDBA31</color>
+
 </resources>
