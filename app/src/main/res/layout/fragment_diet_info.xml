@@ -36,7 +36,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/border_disable_item_of_list"
         android:backgroundTint="@color/orange_light"
-        android:text="TextView"
+        android:text="TextView1"
         android:textColor="@color/orange_txt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
