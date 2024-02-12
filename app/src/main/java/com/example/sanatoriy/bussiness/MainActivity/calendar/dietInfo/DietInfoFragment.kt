@@ -2,6 +2,7 @@ package com.example.sanatoriy.bussiness.MainActivity.calendar.dietInfo
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -42,9 +43,6 @@ class DietInfoFragment : Fragment() {
         textCenter = motionLayout.findViewById(R.id.text_center);
         textUp =motionLayout.findViewById(R.id.text_up);
         textFront=motionLayout.findViewById(R.id.text_front);
-        textUp.text ="000000000000000000000000000000000"
-        textCenter.text="0000000000000000000000000000000000"
-        textFront.text=" 0000000000000000000000000000000000000"
         val carousel: Carousel = motionLayout.findViewById(R.id.carousel);
         carousel.setAdapter(object : Carousel.Adapter {
             override fun count(): Int {
@@ -53,6 +51,24 @@ class DietInfoFragment : Fragment() {
 
             override fun populate(view: View, index: Int) {
             when(index){
+                0 -> {textUp.setText(R.string.diet1)
+                          textFront.setText(R.string.diet2)
+                             textCenter.setText(R.string.diet3)
+                Log.e("E",index.toString())}
+                1 -> {textUp.setText(R.string.diet2)
+                         textFront.setText(R.string.diet3)
+                              textCenter.setText(R.string.diet4)
+                    Log.e("E",index.toString())}
+                2 -> {textUp.setText(R.string.diet3)
+                         textFront.setText(R.string.diet4)
+                             textCenter.setText(R.string.diet1)
+                    Log.e("E",index.toString())}
+                3 -> {textUp.setText(R.string.diet4)
+                         textFront.setText(R.string.diet1)
+                             textCenter.setText(R.string.diet2)
+                    Log.e("E",index.toString())}
+
+
 
             }
             }
